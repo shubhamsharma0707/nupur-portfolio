@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nupur Singh | Full Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script:wght@500&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        :root {
+            --light-blue: #E2EDF3;
+            --accent-blue: #B9D1E1;
+            --dark-text: #2C4A63;
+            --sub-text: #5D87A8;
+        }
+
+        body {
+            background-color: var(--light-blue);
+            color: #334155;
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .font-impact { font-family: 'Anton', sans-serif; letter-spacing: 0.05em; }
+        .font-script { font-family: 'Dancing Script', cursive; }
+        .font-body { font-family: 'Montserrat', sans-serif; }
+
+        .bento-card {
+            background-color: var(--accent-blue);
+            border-radius: 1rem;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .bento-card-white {
+            background-color: white;
+            border: 1px solid var(--accent-blue);
+            border-radius: 1rem;
+            overflow: hidden;
+        }
+
+        .perspective-container {
+            perspective: 1200px;
+        }
+
+        .hero-inner {
+            transform-style: preserve-3d;
+        }
+
+        .letter {
+            display: inline-block;
+            transform-origin: bottom center;
+        }
+
+        .project-img-placeholder {
+            background: linear-gradient(45deg, #B9D1E1, #ffffff);
+            display: flex;
+            align-items: center;
+            justify-content: center; 
+            text-align: center;
+            padding: 20px;
+            color: var(--dark-text);
+            font-weight: bold;
+            aspect-ratio: 4/3;
+            border-radius: 0.5rem;
+        }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--light-blue); }
+        ::-webkit-scrollbar-thumb { background: var(--accent-blue); border-radius: 10px; }
+
+        .animate-on-scroll { opacity: 0; transform: translateY(30px); }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-6">
+        
+        <section id="hero" class="md:col-span-12 bento-card relative h-[600px] flex items-center justify-center perspective-container shadow-2xl">
+            <div id="bg-text" class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-5 select-none">
+                <h1 class="text-[#2C4A63] text-[15rem] md:text-[25rem] font-impact leading-none">NUPUR</h1>
+            </div>
+
+            <div class="hero-inner relative z-10 text-center px-4">
+                <p id="hero-sub" class="font-script text-3xl md:text-5xl text-[#5D87A8] mb-[-15px] relative opacity-0">
+                    B.Sc. Psychology student
+                </p>
+
+                <h1 id="hero-name" class="flex justify-center flex-wrap gap-x-4 mb-4">
+                    <span class="flex name-word" id="word-nupur"></span>
+                    <span class="flex name-word" id="word-singh"></span>
+                </h1>
+
+                <div id="hero-footer" class="mt-4 flex flex-col items-center opacity-0 scale-90">
+                    <span class="font-impact text-3xl tracking-widest text-[#2C4A63]">PORTFOLIO 2025</span>
+                    <div class="flex space-x-6 mt-6">
+                        <a href="mailto:YOUR_EMAIL_HERE@gmail.com" class="w-12 h-12 rounded-full bg-[#2C4A63] flex items-center justify-center text-white cursor-pointer shadow-lg hover:scale-110 transition-transform">
+                            <i data-lucide="mail"></i>
+                        </a>
+                        <a href="tel:YOUR_PHONE_NUMBER_HERE" class="w-12 h-12 rounded-full bg-[#2C4A63] flex items-center justify-center text-white cursor-pointer shadow-lg hover:scale-110 transition-transform">
+                            <i data-lucide="phone"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="absolute top-8 left-8 hidden md:block">
+                <p class="font-impact text-[#2C4A63] text-xl opacity-60">RISHIHOOD UNIVERSITY</p>
+                <p class="font-script text-[#5D87A8] text-lg">MaNaS School of Psychology</p>
+            </div>
+        </section>
+
+        <div class="md:col-span-7 bento-card-white p-10 animate-on-scroll">
+            <div class="flex items-center gap-4 mb-6">
+                <h2 class="font-impact text-6xl text-[#B9D1E1]">INTRODUCTION</h2>
+                <span class="w-12 h-px bg-[#B9D1E1]"></span>
+            </div>
+            <div class="space-y-4 text-[#2C4A63] leading-relaxed">
+                <p class="text-xl font-script text-[#5D87A8]">"Motivated, inquisitive, and a creative thinker."</p>
+                <p class="font-body text-lg">
+                    I am Nupur, a student with a solid academic background and a deep love for learning about the human mind. 
+                    My desire to work as a professional psychologist is rooted in my fascination with thoughts and emotions.
+                </p>
+                <p class="font-body opacity-80">
+                    In my spare time, I keep myself balanced and focused by playing badminton and listening to music. 
+                    I see myself as a goal-oriented individual who is always willing to try new things.
+                </p>
+            </div>
+        </div>
+
+        <div class="md:col-span-5 bento-card p-10 animate-on-scroll">
+            <h2 class="font-impact text-5xl text-white mb-8">ACADEMICS</h2>
+            <div class="space-y-4">
+                <div class="bg-white/20 p-4 rounded-lg flex justify-between items-center backdrop-blur-md">
+                    <span class="font-impact text-white">CLASS 12 (CBSE)</span>
+                    <span class="font-impact text-[#2C4A63] text-2xl">93.4%</span>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="border border-white/30 p-3 rounded text-center">
+                        <p class="text-xs text-white/70 uppercase">Psychology</p>
+                        <p class="font-impact text-white text-xl">93%</p>
+                    </div>
+                    <div class="border border-white/30 p-3 rounded text-center">
+                        <p class="text-xs text-white/70 uppercase">Pol Science</p>
+                        <p class="font-impact text-white text-xl">88%</p>
+                    </div>
+                    <div class="border border-white/30 p-3 rounded text-center">
+                        <p class="text-xs text-white/70 uppercase">Economics</p>
+                        <p class="font-impact text-white text-xl">95%</p>
+                    </div>
+                    <div class="border border-white/30 p-3 rounded text-center">
+                        <p class="text-xs text-white/70 uppercase">History</p>
+                        <p class="font-impact text-white text-xl">94%</p>
+                    </div>
+                    <div class="border border-white/30 p-3 rounded text-center">
+                        <p class="text-xs text-white/70 uppercase">Yoga</p>
+                        <p class="font-impact text-white text-xl">97%</p>
+                    </div>
+                    <div class="border border-white/30 p-3 rounded text-center">
+                        <p class="text-xs text-white/70 uppercase">English</p>
+                        <p class="font-impact text-white text-xl">88%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="md:col-span-12 bento-card-white p-10 animate-on-scroll">
+            <h2 class="font-impact text-5xl text-[#B9D1E1] mb-8 uppercase">Major Achievements</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="space-y-4 border-l-4 border-[#B9D1E1] pl-6 py-2">
+                    <div class="flex items-center gap-2 text-[#2C4A63]">
+                        <i data-lucide="award" class="w-8 h-8"></i>
+                        <h3 class="font-impact text-2xl">YOUTH PARLIAMENT</h3>
+                    </div>
+                    <p class="text-sm font-body">Secured <strong>1st Position</strong>. Awarded by Chief Minister <strong>Mohan Yadav</strong> at Vidhan Sabha.</p>
+                </div>
+                <div class="space-y-4 border-l-4 border-[#B9D1E1] pl-6 py-2">
+                    <div class="flex items-center gap-2 text-[#2C4A63]">
+                        <i data-lucide="users" class="w-8 h-8"></i>
+                        <h3 class="font-impact text-2xl">BHOPAL LIT FEST</h3>
+                    </div>
+                    <p class="text-sm font-body">Volunteered and interacted with icons like <strong>Usha Uthup</strong> and <strong>Megha Parmar</strong> (The Everest Girl).</p>
+                </div>
+                <div class="space-y-4 border-l-4 border-[#B9D1E1] pl-6 py-2">
+                    <div class="flex items-center gap-2 text-[#2C4A63]">
+                        <i data-lucide="trophy" class="w-8 h-8"></i>
+                        <h3 class="font-impact text-2xl">INTER-SCHOOL BIZ</h3>
+                    </div>
+                    <p class="text-sm font-body">Secured <strong>3rd Place</strong> in inter-school business competition and twice received <strong>"Best Turnout"</strong>.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="md:col-span-12 bento-card-white p-10 animate-on-scroll">
+            <div class="flex flex-col md:flex-row gap-8 items-center">
+                
+                <div class="md:w-1/3 space-y-4">
+                    <div class="flex items-center gap-3 mb-2">
+                        <i data-lucide="camera" class="w-8 h-8 text-[#B9D1E1]"></i>
+                        <h2 class="font-impact text-5xl text-[#B9D1E1] uppercase leading-none">Iconic<br>Moments</h2>
+                    </div>
+                    <p class="font-script text-[#5D87A8] text-2xl">Bhopal Literature Festival</p>
+                    <p class="font-body text-[#2C4A63] text-base leading-relaxed opacity-90">
+                        An unforgettable experience volunteering at the fest. It was an absolute privilege to meet and interact with highly inspiring personalities like the prominent Indian singer Usha Uthup and 'The Everest Girl' Megha Parmar.
+                    </p>
+                </div>
+
+                <div class="md:w-2/3 group relative overflow-hidden rounded-xl shadow-lg cursor-default border-2 border-[#E2EDF3]">
+                    <img src="Screenshot 2026-04-26 at 01.14.49.png" alt="With Usha Uthup and Megha Parmar" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-[1.02]">
+                    <div class="absolute inset-0 bg-[#2C4A63]/5 mix-blend-multiply pointer-events-none"></div>
+                </div>
+
+            </div>
+        </div>
+        <div class="md:col-span-4 bento-card p-10 flex flex-col justify-between animate-on-scroll relative overflow-hidden">
+            <div class="absolute -right-10 -top-10 text-white/10 font-impact text-[8rem] pointer-events-none rotate-12 select-none">
+                SKILLS
+            </div>
+
+            <div class="relative z-10">
+                <h2 class="font-impact text-4xl text-white mb-8 uppercase flex items-center gap-3">
+                    Skillset <i data-lucide="sparkles" class="w-6 h-6 text-[#2C4A63]"></i>
+                </h2>
+                
+                <div class="flex flex-wrap gap-3">
+                    <div class="flex items-center gap-2 bg-white/10 hover:bg-white/30 hover:-translate-y-1 transition-all duration-300 border border-white/20 rounded-full px-4 py-2 text-white cursor-default shadow-sm backdrop-blur-md group">
+                        <i data-lucide="zap" class="w-4 h-4 group-hover:text-[#2C4A63] transition-colors"></i>
+                        <span class="font-body font-bold text-sm">Creative Thinking</span>
+                    </div>
+                    
+                    <div class="flex items-center gap-2 bg-white/10 hover:bg-white/30 hover:-translate-y-1 transition-all duration-300 border border-white/20 rounded-full px-4 py-2 text-white cursor-default shadow-sm backdrop-blur-md group">
+                        <i data-lucide="layers" class="w-4 h-4 group-hover:text-[#2C4A63] transition-colors"></i>
+                        <span class="font-body font-bold text-sm">Content Ideation</span>
+                    </div>
+                    
+                    <div class="flex items-center gap-2 bg-white/10 hover:bg-white/30 hover:-translate-y-1 transition-all duration-300 border border-white/20 rounded-full px-4 py-2 text-white cursor-default shadow-sm backdrop-blur-md group">
+                        <i data-lucide="megaphone" class="w-4 h-4 group-hover:text-[#2C4A63] transition-colors"></i>
+                        <span class="font-body font-bold text-sm">Public Speaking</span>
+                    </div>
+                    
+                    <div class="flex items-center gap-2 bg-white/10 hover:bg-white/30 hover:-translate-y-1 transition-all duration-300 border border-white/20 rounded-full px-4 py-2 text-white cursor-default shadow-sm backdrop-blur-md group">
+                        <i data-lucide="pen-tool" class="w-4 h-4 group-hover:text-[#2C4A63] transition-colors"></i>
+                        <span class="font-body font-bold text-sm">Graphic Design</span>
+                    </div>
+                    
+                    <div class="flex items-center gap-2 bg-white/10 hover:bg-white/30 hover:-translate-y-1 transition-all duration-300 border border-white/20 rounded-full px-4 py-2 text-white cursor-default shadow-sm backdrop-blur-md group">
+                        <i data-lucide="smile" class="w-4 h-4 group-hover:text-[#2C4A63] transition-colors"></i>
+                        <span class="font-body font-bold text-sm">Acting & Performance</span>
+                    </div>
+
+                    <div class="flex items-center gap-2 bg-white/10 hover:bg-white/30 hover:-translate-y-1 transition-all duration-300 border border-white/20 rounded-full px-4 py-2 text-white cursor-default shadow-sm backdrop-blur-md group">
+                        <i data-lucide="globe" class="w-4 h-4 group-hover:text-[#2C4A63] transition-colors"></i>
+                        <span class="font-body font-bold text-sm">Community Outreach</span>
+                    </div>
+
+                    <div class="flex items-center gap-2 bg-white/10 hover:bg-white/30 hover:-translate-y-1 transition-all duration-300 border border-white/20 rounded-full px-4 py-2 text-white cursor-default shadow-sm backdrop-blur-md group">
+                        <i data-lucide="heart" class="w-4 h-4 group-hover:text-[#2C4A63] transition-colors"></i>
+                        <span class="font-body font-bold text-sm">Volunteering</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-10 pt-4 border-t border-white/20 relative group overflow-hidden rounded-xl p-4 bg-white/5 hover:bg-white/20 transition-all duration-500 cursor-default">
+                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                <div class="flex items-center justify-between relative z-10">
+                    <p class="font-script text-[#2C4A63] text-3xl font-bold">Teamwork & Leadership</p>
+                    <i data-lucide="users" class="w-6 h-6 text-[#2C4A63]"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="md:col-span-8 bento-card-white p-10 animate-on-scroll">
+            <div class="flex justify-between items-end mb-8">
+                <div>
+                    <h2 class="font-impact text-5xl text-[#B9D1E1] uppercase">Design Portfolio</h2>
+                    <p class="font-script text-[#5D87A8] text-xl">Visual storytelling & poster designs</p>
+                </div>
+                <i data-lucide="palette" class="w-12 h-12 text-[#B9D1E1]"></i>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                
+                <div class="group relative overflow-hidden rounded-xl shadow-md aspect-[3/4] cursor-pointer">
+                    <img src="Screenshot 2026-04-26 at 01.21.17.png" alt="Bollywood Meetup Poster" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#2C4A63]/90 via-[#2C4A63]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+                        <h3 class="text-white font-impact text-2xl tracking-wide">BOLLYWOOD MEETUP</h3>
+                        <p class="text-[#E2EDF3] font-body text-sm">Superstars Event Poster</p>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-xl shadow-md aspect-[3/4] cursor-pointer">
+                    <img src="Screenshot 2026-04-26 at 01.21.17 copy.png" alt="Law and History Project" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#2C4A63]/90 via-[#2C4A63]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+                        <h3 class="text-white font-impact text-2xl tracking-wide">LAW & HISTORY</h3>
+                        <p class="text-[#E2EDF3] font-body text-sm">Constitutional Insight Project</p>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-xl shadow-md aspect-[3/4] cursor-pointer">
+                    <img src="Screenshot 2026-04-26 at 01.21.24 copy.png" alt="Prakrit Silk Event" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#2C4A63]/90 via-[#2C4A63]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+                        <h3 class="text-white font-impact text-2xl tracking-wide">MP SILK FEDERATION</h3>
+                        <p class="text-[#E2EDF3] font-body text-sm">Government Event Design</p>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-xl shadow-md aspect-[3/4] cursor-pointer">
+                    <img src="Screenshot 2026-04-26 at 01.21.24.png" alt="Chaat Adda Delivery" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#2C4A63]/90 via-[#2C4A63]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+                        <h3 class="text-white font-impact text-2xl tracking-wide">CHAAT ADDA ITARSI</h3>
+                        <p class="text-[#E2EDF3] font-body text-sm">Food & Delivery Branding</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="md:col-span-6 bento-card p-10 animate-on-scroll">
+            <h2 class="font-impact text-4xl text-white mb-6 uppercase tracking-tighter">Economy of Roman Empire</h2>
+            <div class="bg-white/10 p-6 rounded-lg backdrop-blur-sm space-y-4">
+                <p class="text-xs font-bold text-white/60 uppercase tracking-widest">Research Overview</p>
+                <ul class="text-sm text-white/90 space-y-2 list-disc pl-4 font-body">
+                    <li>Production & consumption of Olive Oil and Wheat.</li>
+                    <li>Infrastructure of harbors, mines, and quarries.</li>
+                    <li>Shift from Spanish to Italian producers.</li>
+                    <li>Impact on semi-nomadic communities in North Africa.</li>
+                </ul>
+                <div class="pt-4 flex items-center gap-2">
+                    <i data-lucide="globe" class="text-white"></i>
+                    <span class="font-impact text-white text-xl">SILK ROAD ANALYSIS</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="md:col-span-6 bento-card-white p-10 animate-on-scroll border-2 border-[#B9D1E1]">
+            <h2 class="font-impact text-4xl text-[#2C4A63] mb-6 uppercase tracking-tighter">Foreign Relations Study</h2>
+            <div class="space-y-4">
+                <div class="flex items-start gap-4">
+                    <div class="bg-[#2C4A63] text-white p-2 rounded font-impact">NEPAL</div>
+                    <p class="text-sm font-body opacity-80">Geographical relations with 5 Indian states. Approx 1860km border diplomacy analysis.</p>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="bg-[#B9D1E1] text-[#2C4A63] p-2 rounded font-impact">BANGLADESH</div>
+                    <p class="text-sm font-body opacity-80">Insight into political and economic relations and geographical disputes.</p>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="bg-[#E2EDF3] text-[#2C4A63] p-2 rounded font-impact border border-[#B9D1E1]">SRI LANKA</div>
+                    <p class="text-sm font-body opacity-80">Historical and cultural relations and modern diplomatic shifts.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="md:col-span-8 bento-card p-12 flex flex-col justify-center animate-on-scroll">
+            <h2 class="font-impact text-6xl text-white mb-6">FUTURE GOALS</h2>
+            <div class="bg-white/20 p-6 rounded-xl backdrop-blur-md">
+                <p class="text-white font-body text-lg leading-relaxed">
+                    I aspire to build a career as a <strong>psychologist</strong> to meaningfully contribute to mental health. 
+                    I aim to combine my analytical psychology training with my <strong>graphic design skills</strong> to creatively communicate 
+                    awareness in engaging, innovative ways.
+                </p>
+                <div class="mt-6 flex gap-4">
+                    <span class="px-4 py-2 bg-white/30 rounded-full text-white text-xs font-bold">PROBLEM SOLVING</span>
+                    <span class="px-4 py-2 bg-white/30 rounded-full text-white text-xs font-bold">RESEARCH</span>
+                    <span class="px-4 py-2 bg-white/30 rounded-full text-white text-xs font-bold">CREATIVITY</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="md:col-span-4 bento-card-white p-10 flex flex-col items-center justify-center text-center animate-on-scroll">
+            <i data-lucide="external-link" class="w-16 h-16 text-[#B9D1E1] mb-4"></i>
+            <h3 class="font-impact text-3xl text-[#2C4A63] mb-4 uppercase">View Work</h3>
+            <div class="w-full space-y-3">
+                <a href="https://www.canva.com/design/DAG1eWr3zHM/NT93WXLkk-1tH8hK9zCDWg/view?utm_content=DAG1eWr3zHM&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hf0f8b72f96#1" target="_blank" rel="noopener noreferrer" class="block w-full py-3 bg-[#E2EDF3] rounded-lg font-impact text-[#2C4A63] hover:bg-[#B9D1E1] transition-colors uppercase">Link 1</a>
+                <a href="https://www.canva.com/design/DAGz4Vhyi5A/cxNtKAiwf1wKNLsk9tMlFg/view?utm_content=DAGz4Vhyi5A&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h12746aac19#15" target="_blank" rel="noopener noreferrer" class="block w-full py-3 bg-[#E2EDF3] rounded-lg font-impact text-[#2C4A63] hover:bg-[#B9D1E1] transition-colors uppercase">Link 2</a>
+                <a href="https://www.canva.com/design/DAG9njqLuBk/B_SlkF4jIUrbbTz6kBv4ng/view?utm_content=DAG9njqLuBk&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h095a512e04" target="_blank" rel="noopener noreferrer" class="block w-full py-3 bg-[#E2EDF3] rounded-lg font-impact text-[#2C4A63] hover:bg-[#B9D1E1] transition-colors uppercase">Link 3</a>
+            </div>
+        </div>
+
+        <footer class="md:col-span-12 py-16 flex flex-col items-center justify-center animate-on-scroll">
+            <h2 class="font-script text-6xl text-[#2C4A63] mb-4">Thank You.</h2>
+            <div class="flex gap-4 items-center">
+                <span class="font-impact text-[#5D87A8] tracking-widest text-xl">NUPUR SINGH</span>
+                <span class="w-2 h-2 rounded-full bg-[#B9D1E1]"></span>
+                <span class="font-body text-xs opacity-60 uppercase">Portfolio 2025</span>
+            </div>
+            <p class="mt-12 text-[10px] opacity-40 uppercase tracking-[0.5em]">Psychology • Design • Leadership</p>
+        </footer>
+
+    </div>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Register ScrollTrigger
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Split text function for pop-up animation
+        function splitText(id, text) {
+            const container = document.getElementById(id);
+            container.innerHTML = '';
+            text.split('').forEach(char => {
+                const span = document.createElement('span');
+                span.innerText = char;
+                span.className = 'letter text-6xl md:text-9xl font-impact text-[#2C4A63] uppercase tracking-tighter';
+                container.appendChild(span);
+            });
+        }
+
+        window.onload = () => {
+            splitText('word-nupur', 'NUPUR');
+            splitText('word-singh', 'SINGH');
+
+            const tl = gsap.timeline();
+
+            // Initial Hero Entrances
+            tl.to('#hero-sub', { opacity: 1, x: 0, duration: 0.8, ease: "power2.out" })
+              .from('.letter', {
+                  opacity: 0,
+                  y: 100,
+                  scale: 0.2,
+                  rotateX: -90,
+                  duration: 1,
+                  stagger: 0.04,
+                  ease: "back.out(1.7)"
+              }, "-=0.4")
+              .to('#hero-footer', { opacity: 1, scale: 1, duration: 0.5 }, "-=0.2");
+
+            // Background "MANAS" Floating Loop
+            gsap.to('#bg-text', {
+                z: 60,
+                rotateX: 5,
+                rotateY: -5,
+                duration: 4,
+                repeat: -1,
+                yoyo: true,
+                ease: "sine.inOut"
+            });
+
+            // Scroll animations for bento cards
+            gsap.utils.toArray('.animate-on-scroll').forEach(section => {
+                gsap.to(section, {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1,
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: section,
+                        start: "top 85%",
+                        toggleActions: "play none none none"
+                    }
+                });
+            });
+
+            // 3D Tilt Effect for Hero
+            const hero = document.getElementById('hero');
+            hero.addEventListener('mousemove', (e) => {
+                const { left, top, width, height } = hero.getBoundingClientRect();
+                const x = (e.clientX - left) / width - 0.5;
+                const y = (e.clientY - top) / height - 0.5;
+
+                gsap.to('.hero-inner', {
+                    rotateY: x * 10,
+                    rotateX: -y * 10,
+                    duration: 0.5,
+                    ease: "power2.out"
+                });
+            });
+
+            hero.addEventListener('mouseleave', () => {
+                gsap.to('.hero-inner', {
+                    rotateY: 0,
+                    rotateX: 0,
+                    duration: 1,
+                    ease: "elastic.out(1, 0.3)"
+                });
+            });
+        };
+    </script>
+</body>
+</html>
